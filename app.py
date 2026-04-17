@@ -7,7 +7,7 @@ DATA_PATH = "./formatted_data.csv"
 data = pandas.read_csv(DATA_PATH)
 data = data.sort_values(by="date")
 
-dash_app = Dash(__name__)
+app = Dash(__name__)
 
 header = html.H1(
     "Soul Foods Pink Morsel Sales Visualiser",
@@ -46,7 +46,7 @@ radio_button = dcc.RadioItems(
 
 visualization = dcc.Graph(id="visualization")
 
-dash_app.layout = html.Div([
+app.layout = html.Div([
     header,
     radio_button,
     visualization
@@ -83,4 +83,4 @@ def update_chart(region):
     return fig
 
 if __name__ == '__main__':
-    dash_app.run()
+    app.run()
