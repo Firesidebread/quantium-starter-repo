@@ -25,6 +25,6 @@ combined["sales"] = combined["quantity"] * combined["price"]
 output = combined[["sales", "date", "region"]]
 
 # Save to a new CSV file
-output.to_csv("data/output.csv", index=False)
+output.to_csv("formatted_data.csv", index=False)
 
-print("Done! Output saved to data/output.csv")
+print("Done! Output saved to formatted_data.csv")
